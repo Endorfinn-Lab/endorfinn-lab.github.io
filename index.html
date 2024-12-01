@@ -20,6 +20,87 @@
 #HPB_TABLE_5_D_200913122527 td {
   padding: 2px;
 }
+body .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .nav-tabs {
+      display: flex;
+    }
+    .nav-tab {
+      padding: 10px 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+      background-color: #333;
+    }
+    .nav-tab.active {
+      background-color: #555;
+    }
+    .banner {
+      position: relative;
+      height: 300px;
+      overflow: hidden;
+    }
+    .banner img {
+      width: 100%;
+      height: auto;
+    }
+    .banner-text {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: white;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px;
+    }
+    .news-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .news-item {
+        border: 1px solid #333;
+        padding: 15px;
+        color: white;
+        background-color: #222;
+    }
+    .news-date {
+        font-size: 0.8rem;
+        color: #aaa;
+    }
+    .news-title {
+        color: white;
+        margin-bottom: 10px;
+    }
+    .read-more {
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: #555;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    .load-more {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+    .load-more a {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #f00;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+    }
 </style>
 </head>
 <body>
@@ -48,7 +129,7 @@
         <div class="section-title-block">
           <h2 class="section-title">INTRODUCTION</h2>
           <p class="section-desc">
-            Known as Endorfinn, nice to meet you.<br><br>
+            <br>Known as Endorfinn, nice to meet you.<br>
             Any updates related to me will be announced.
           </p>
         </div>
@@ -61,19 +142,65 @@
           <h2 class="section-title">NEWS</h2>
           <p class="section-desc"></p>
         </div>
-        <div class="two-column-wrapper">
-          <div class="two-column-desc" style="text-align: left;">
-            <p class="text"><br></p>
-            <table border="1" style="border-spacing: 0;" id="HPB_TABLE_5_D_200913122527" class="hpb-cnt-tb3">
-              <tbody>
-                <tr>
-                  <td class="hpb-cnt-tb-cell3" style="padding-left: 5px; margin: 5px; border-color: #333;"><span style="color: #990000;"> important notification</span><br></td>
-                </tr>
-              </tbody>
-            </table>
+        <div class="container">
+          <div class="header">
+            <h1>news notification</h1>
+            <div class="nav-tabs">
+              <div class="nav-tab active">Latest</div>
+              <div class="nav-tab">Pixiv</div>
+              <div class="nav-tab">Github</div>
+              <div class="nav-tab">osu!</div>
+            </div>
           </div>
-        </div>
-      </div>
+          <div class="banner">
+              <img src="./files/rand-banner2.jfif" alt="rand-banner"> 
+              <div class="banner-text">
+                  <div>[o!m 7K] RAND() Invitationals 3rd Place !</div>
+                  <div style="text-align: right;"><a href="https://osu.ppy.sh/community/forums/topics/1979140?n=1" target="_blank" class="read-more">READ MORE +</a></div>
+              </div>
+          </div>
+          <div class="news-list">
+                <div class="news-item">
+                  <div class="news-type">osu!</div>
+                  <div class="news-date">2024.12.1</div>
+                  <div class="news-title">[o!m skin] Latest Update</div>
+                  <a href="https://github.com/Endorfinn-Lab/endorfinn-lab.github.io/raw/refs/heads/main/osu%20files/blacktp%20-%20edit.osk" target="_blank" class="read-more">URL</a>
+                </div>  
+                <div class="news-item">
+                  <div class="news-type">osu!</div>
+                  <div class="news-date">2024.9.18</div>
+                  <div class="news-title">[o!m 7K] RAND() Invitationals 3rd Place</div>
+                  <a href="https://osu.ppy.sh/community/forums/topics/1979140?n=1" target="_blank" class="read-more">URL</a>
+                </div>
+                <div class="news-item">
+                  <div class="news-type">osu!</div>
+                  <div class="news-date">2024.6.11</div>
+                  <div class="news-title">[o!m 7K] LN Dan Azimuth Clear</div>
+                  <a href="https://osu.ppy.sh/scores/2977920306" target="_blank" class="read-more">URL</a>
+                </div>
+                <div class="news-item">
+                  <div class="news-type"></div>
+                  <div class="news-date"></div>
+                  <div class="news-title"></div>
+                  <a href="#" class="read-more">URL</a>
+                </div>
+                <div class="news-item">
+                  <div class="news-type"></div>
+                  <div class="news-date"></div>
+                  <div class="news-title"></div>
+                  <a href="#" class="read-more">URL</a>
+                </div>
+                <div class="news-item">
+                  <div class="news-type"></div>
+                  <div class="news-date"></div>
+                  <div class="news-title"></div>
+                  <a href="#" class="read-more">URL</a>
+                </div>
+          </div>
+          <!-- <div class="load-more">
+            <a href="#">→ MORE</a>
+          </div>
+        </div> -->
     </section>
 
     <section class="section" id="works">
@@ -138,7 +265,7 @@
   </footer>
 </div>
 
-<!-- PhotoSwipe (removed unnecessary bis_skin_checked attributes) -->
+<!-- PhotoSwipe -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="pswp__bg"></div>
   <div class="pswp__scroll-wrap">
@@ -173,23 +300,21 @@
   </div>
 </div>
 
-
 <script src="./files/jquery.min.js.download"></script>
 <script src="./files/photoswipe.min.js.download"></script>
 <script src="./files/photoswipe-ui-default.js.download"></script>
 <script src="./files/photoswipe_setup.js.download"></script>
 <script src="./files/script.js.download"></script>
 <script>
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    const targetId = this.getAttribute('href').toLowerCase();
-    const targetElement = document.querySelector(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' });
-    } else {
-      console.warn(`Link target not found: ${targetId}`); // Or display a message to the user
-    }
+// for tab switching (not fully implemented)
+const tabs = document.querySelectorAll('.nav-tab');
+
+tabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+        tabs.forEach(t => t.classList.remove('active'));
+    tab.classList.add('active');
+
+    //TODO: Filter event list based on selected tab
   });
 });
 </script>
