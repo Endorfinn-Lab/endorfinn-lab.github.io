@@ -33,6 +33,7 @@ body .container {
     }
     .nav-tabs {
       display: flex;
+      gap: 5px; /* Added gap */
     }
     .nav-tab {
       padding: 10px 15px;
@@ -40,18 +41,27 @@ body .container {
       border-radius: 5px 5px 0 0;
       cursor: pointer;
       background-color: #333;
+      color: white;
+      transition: background-color 0.3s ease;
     }
     .nav-tab.active {
       background-color: #555;
+    }
+    .nav-tab:hover {
+      background-color: #444; /* Added hover effect */
     }
     .banner {
       position: relative;
       height: 300px;
       overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 20px; /*Added Margin*/
     }
     .banner img {
       width: 100%;
       height: auto;
+      display: block; /* Fix for potential image spacing */
     }
     .banner-text {
         position: absolute;
@@ -60,10 +70,11 @@ body .container {
         color: white;
         background-color: rgba(0,0,0,0.5);
         padding: 10px;
+        border-radius: 5px;
     }
     .news-list {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif Columns */
       gap: 20px;
     }
     .news-item {
@@ -71,14 +82,28 @@ body .container {
         padding: 15px;
         color: white;
         background-color: #222;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added transition */
     }
+    .news-item:hover {
+      transform: translateY(-3px); /* Added hover effect */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+     .news-type {
+          font-size: 0.9em;
+          margin-bottom: 5px;
+          color: #ccc;
+      }
     .news-date {
         font-size: 0.8rem;
         color: #aaa;
+        margin-bottom: 5px; /* Added margin */
     }
     .news-title {
         color: white;
         margin-bottom: 10px;
+         font-size: 1.1em; /* Adjusted size */
     }
     .read-more {
         display: inline-block;
@@ -87,6 +112,10 @@ body .container {
         color: white;
         text-decoration: none;
         border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .read-more:hover {
+        background-color: #666; /* Added hover effect */
     }
     .load-more {
       display: block;
@@ -100,6 +129,11 @@ body .container {
         color: white;
         text-decoration: none;
         border-radius: 5px;
+    }
+
+    /* ADDED THIS FOR SMOOTH SCROLL OFFSET */
+	  html {
+        scroll-behavior: smooth;
     }
 </style>
 </head>
@@ -146,10 +180,10 @@ body .container {
           <div class="header">
             <h1>news notification</h1>
             <div class="nav-tabs">
-              <div class="nav-tab active">Latest</div>
-              <div class="nav-tab">Pixiv</div>
-              <div class="nav-tab">Github</div>
-              <div class="nav-tab">osu!</div>
+              <div class="nav-tab active" data-tab="latest">Latest</div>
+              <div class="nav-tab" data-tab="pixiv">Pixiv</div>
+              <div class="nav-tab" data-tab="github">Github</div>
+              <div class="nav-tab" data-tab="osu">osu!</div>
             </div>
           </div>
           <div class="banner">
@@ -160,41 +194,47 @@ body .container {
               </div>
           </div>
           <div class="news-list">
-                <div class="news-item">
+                <div class="news-item" data-type="osu" data-tab="latest">
                   <div class="news-type">osu!</div>
                   <div class="news-date">2024.12.1</div>
                   <div class="news-title">[o!m skin] Latest Update</div>
                   <a href="https://github.com/Endorfinn-Lab/endorfinn-lab.github.io/raw/refs/heads/main/osu%20files/blacktp%20-%20edit.osk" target="_blank" class="read-more">URL</a>
                 </div>  
-                <div class="news-item">
+                <div class="news-item" data-type="osu" data-tab="latest">
                   <div class="news-type">osu!</div>
                   <div class="news-date">2024.9.18</div>
                   <div class="news-title">[o!m 7K] RAND() Invitationals 3rd Place</div>
                   <a href="https://osu.ppy.sh/community/forums/topics/1979140?n=1" target="_blank" class="read-more">URL</a>
                 </div>
-                <div class="news-item">
+                <div class="news-item" data-type="osu" data-tab="latest">
                   <div class="news-type">osu!</div>
                   <div class="news-date">2024.6.11</div>
                   <div class="news-title">[o!m 7K] LN Dan Azimuth Clear</div>
                   <a href="https://osu.ppy.sh/scores/2977920306" target="_blank" class="read-more">URL</a>
                 </div>
-                <div class="news-item">
-                  <div class="news-type"></div>
-                  <div class="news-date"></div>
-                  <div class="news-title"></div>
+                 <div class="news-item" data-type="pixiv" data-tab="pixiv" style="display: none;">
+                  <div class="news-type">Pixiv</div>
+                  <div class="news-date">2024.12.01</div>
+                  <div class="news-title">New illustration available</div>
                   <a href="#" class="read-more">URL</a>
                 </div>
-                <div class="news-item">
-                  <div class="news-type"></div>
-                  <div class="news-date"></div>
-                  <div class="news-title"></div>
+                <div class="news-item" data-type="github" data-tab="github" style="display: none;">
+                  <div class="news-type">Github</div>
+                  <div class="news-date">2024.12.01</div>
+                  <div class="news-title">New repo created</div>
                   <a href="#" class="read-more">URL</a>
                 </div>
-                <div class="news-item">
-                  <div class="news-type"></div>
-                  <div class="news-date"></div>
-                  <div class="news-title"></div>
+                 <div class="news-item" data-type="osu" data-tab="osu" style="display: none;">
+                  <div class="news-type">osu!</div>
+                  <div class="news-date">2024.12.01</div>
+                  <div class="news-title">osu! related updates</div>
                   <a href="#" class="read-more">URL</a>
+                </div>
+                 <div class="news-item" data-type="osu" data-tab="osu" style="display: none;">
+                   <div class="news-type">osu!</div>
+                   <div class="news-date">2024.12.01</div>
+                   <div class="news-title">osu! related updates 2</div>
+                   <a href="#" class="read-more">URL</a>
                 </div>
           </div>
           <!-- <div class="load-more">
@@ -306,17 +346,43 @@ body .container {
 <script src="./files/photoswipe_setup.js.download"></script>
 <script src="./files/script.js.download"></script>
 <script>
-// for tab switching (not fully implemented)
-const tabs = document.querySelectorAll('.nav-tab');
+  // for tab switching (not fully implemented)
+  const tabs = document.querySelectorAll('.nav-tab');
+  const newsItems = document.querySelectorAll('.news-item');
 
-tabs.forEach(tab => {
-  tab.addEventListener('click', () => {
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
         tabs.forEach(t => t.classList.remove('active'));
-    tab.classList.add('active');
+      tab.classList.add('active');
 
-    //TODO: Filter event list based on selected tab
+       const tabType = tab.getAttribute('data-tab');
+        newsItems.forEach(item => {
+            if (item.getAttribute('data-tab') === tabType || item.getAttribute('data-tab') === "latest"){
+              item.style.display = "";
+          } else {
+                item.style.display = "none";
+          }
+        })
+    });
   });
-});
+
+  // Smooth Scrolling
+  document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute('href');
+          const targetElement = document.querySelector(targetId);
+
+          if (targetElement) {
+               window.scrollTo({
+                  top: targetElement.offsetTop,
+                  behavior: 'smooth' // For smooth animation
+              });
+          }
+      });
+  });
 </script>
+
 </body>
 </html>
