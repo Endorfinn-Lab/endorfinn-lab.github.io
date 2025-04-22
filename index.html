@@ -20,120 +20,11 @@
 #HPB_TABLE_5_D_200913122527 td {
   padding: 2px;
 }
-body .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-    .header {
+body .header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 20px;
-    }
-    .nav-tabs {
-      display: flex;
-      gap: 5px; /* Added gap */
-    }
-    .nav-tab {
-      padding: 10px 15px;
-      border: 1px solid #ccc;
-      border-radius: 5px 5px 0 0;
-      cursor: pointer;
-      background-color: #333;
-      color: white;
-      transition: background-color 0.3s ease;
-    }
-    .nav-tab.active {
-      background-color: #555;
-    }
-    .nav-tab:hover {
-      background-color: #444; /* Added hover effect */
-    }
-    .banner {
-      position: relative;
-      height: 300px;
-      overflow: hidden;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-      margin-bottom: 20px; /*Added Margin*/
-    }
-    .banner img {
-      width: 100%;
-      height: auto;
-      display: block; /* Fix for potential image spacing */
-    }
-    .banner-text {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        color: white;
-        background-color: rgba(0,0,0,0.5);
-        padding: 10px;
-        border-radius: 5px;
-    }
-    .news-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsif Columns */
-      gap: 20px;
-    }
-    .news-item {
-        border: 1px solid #333;
-        padding: 15px;
-        color: white;
-        background-color: #222;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-        transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added transition */
-    }
-    .news-item:hover {
-      transform: translateY(-3px); /* Added hover effect */
-        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    }
-     .news-type {
-          font-size: 0.9em;
-          margin-bottom: 5px;
-          color: #ccc;
-      }
-    .news-date {
-        font-size: 0.8rem;
-        color: #aaa;
-        margin-bottom: 5px; /* Added margin */
-    }
-    .news-title {
-        color: white;
-        margin-bottom: 10px;
-         font-size: 1.1em; /* Adjusted size */
-    }
-    .read-more {
-        display: inline-block;
-        padding: 5px 10px;
-        background-color: #555;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-    .read-more:hover {
-        background-color: #666; /* Added hover effect */
-    }
-    .load-more {
-      display: block;
-      text-align: center;
-      margin-top: 20px;
-    }
-    .load-more a {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #f00;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-    }
-
-    /* ADDED THIS FOR SMOOTH SCROLL OFFSET */
-	  html {
-        scroll-behavior: smooth;
     }
 </style>
 </head>
@@ -174,81 +65,38 @@ body .container {
       <div class="inner">
         <div class="section-title-block">
           <h2 class="section-title">NEWS</h2>
-          <p class="section-desc"></p>
+          <p class="section-desc">
+            <br>Latest Information
+          </p>
         </div>
-        <div class="container">
-          <div class="header">
-            <h1>news notification</h1>
-            <div class="nav-tabs">
-              <div class="nav-tab active" data-tab="latest">Latest</div>
-              <div class="nav-tab" data-tab="pixiv">Pixiv</div>
-              <div class="nav-tab" data-tab="github">Github</div>
-              <div class="nav-tab" data-tab="osu">osu!</div>
-            </div>
+        <div class="two-column-wrapper" bis_skin_checked="1">
+          <div class="two-column-desc" style="text-align : left;" bis_skin_checked="1">
+            <p class="text">
+              『 Endorfinn's osu!mania Skin 』<br>
+              Thanks to <a href="https://osu.ppy.sh/users/5101276">lppdemon</a> for the base skin.<br> I've edited some parts to make it more comfortable for my own playstyle. I primarily use this skin for 4k and 7k, so you might need to make adjustments for other key. This skin includes an auto-hidden. To adjust the hidden height, copy the "mania-key" assets from the 'auto_hidden' folder and paste them into the skin's main folder (replace any existing files if prompted). <br><br>
+              Link: <a href="https://github.com/Endorfinn-Lab/endorfinn-lab.github.io/raw/refs/heads/main/osu%20files/blacktp%20-%20edit.osk" target="_blank">blacktp - edit</a><br>
+              Scroll Speed Recommendation: 30-32
+            </p><br><br>
+            <table border="1" style="border-spacing : 0px 0px;" id="HPB_TABLE_5_D_200913122527" class="hpb-cnt-tb3">
+              <tbody>
+                <tr>
+                  <td class="hpb-cnt-tb-cell3" style="padding-left : 5px;margin-top : 5px;margin-right : 5px;margin-bottom : 5px;border-color : #333333;"><span style="color : #990000;">『 Important Notice 』</span><br><br>
+                    ◇ Desember 25, 2024 - Present <br>
+                    My laptop is broken, so I won't be around for a while. See you later...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
-          <div class="banner">
-              <img src="./files/rand-banner2.jfif" alt="rand-banner"> 
-              <div class="banner-text">
-                  <div>[o!m 7K] RAND() Invitationals 3rd Place !</div>
-                  <div style="text-align: right;"><a href="https://osu.ppy.sh/community/forums/topics/1979140?n=1" target="_blank" class="read-more">READ MORE +</a></div>
-              </div>
-          </div>
-          <div class="news-list">
-            <div class="news-item" data-type="osu" data-tab="latest">
-              <div class="news-type">osu!</div>
-              <div class="news-date">2024.12.1</div>
-              <div class="news-title">[o!m skin] Latest Update</div>
-              <a href="https://github.com/Endorfinn-Lab/endorfinn-lab.github.io/raw/refs/heads/main/osu%20files/blacktp%20-%20edit.osk" target="_blank" class="read-more">URL</a>
-            </div>  
-            <div class="news-item" data-type="osu" data-tab="latest">
-              <div class="news-type">osu!</div>
-              <div class="news-date">2024.9.18</div>
-              <div class="news-title">[o!m 7K] RAND() Invitationals 3rd Place</div>
-              <a href="https://osu.ppy.sh/community/forums/topics/1979140?n=1" target="_blank" class="read-more">URL</a>
-            </div>
-            <div class="news-item" data-type="osu" data-tab="latest">
-              <div class="news-type">osu!</div>
-              <div class="news-date">2024.6.11</div>
-              <div class="news-title">[o!m 7K] LN Dan Azimuth Clear</div>
-              <a href="https://osu.ppy.sh/scores/2977920306" target="_blank" class="read-more">URL</a>
-            </div>
-             <!-- <div class="news-item" data-type="pixiv" data-tab="pixiv" style="display: none;">
-              <div class="news-type">Pixiv</div>
-              <div class="news-date">2024.12.01</div>
-              <div class="news-title">New illustration available</div>
-              <a href="#" class="read-more">URL</a>
-            </div>
-            <div class="news-item" data-type="github" data-tab="github" style="display: none;">
-              <div class="news-type">Github</div>
-              <div class="news-date">2024.12.01</div>
-              <div class="news-title">New repo created</div>
-              <a href="#" class="read-more">URL</a>
-            </div>
-             <div class="news-item" data-type="osu" data-tab="osu" style="display: none;">
-              <div class="news-type">osu!</div>
-              <div class="news-date">2024.12.01</div>
-              <div class="news-title">osu! related updates</div>
-              <a href="#" class="read-more">URL</a>
-            </div>
-             <div class="news-item" data-type="osu" data-tab="osu" style="display: none;">
-               <div class="news-type">osu!</div>
-               <div class="news-date">2024.12.01</div>
-               <div class="news-title">osu! related updates 2</div>
-               <a href="#" class="read-more">URL</a>
-            </div> -->
+        </div>
       </div>
-          </div>
-          <!-- <div class="load-more">
-            <a href="#">→ MORE</a>
-          </div>
-        </div> -->
     </section>
 
     <section class="section" id="works">
       <div class="inner">
         <div class="section-title-block">
           <h2 class="section-title">WORKS</h2>
-          <p class="section-desc"><br>No works anymore..<br>My laptop is broken, see you later Xd</p>
+          <p class="section-desc"></p>
         </div>
         <div class="two-column-wrapper">
           <div class="two-column-desc" style="text-align: left;">
@@ -283,6 +131,7 @@ body .container {
         <div class="section-title-block">
           <h2 class="section-title">CONTACT</h2>
           <p class="section-desc">
+            <br>
             For business or personal purposes<br>
             Please contact me via email or Twitter listed below:<br>
           </p>
@@ -290,8 +139,8 @@ body .container {
         <div class="contact-wrapper">
           <div class="contact-list">
             <ul>
-              <li><a href="mailto:jibran1baehaqi@gmail.com"><img src="./files/mail.png" alt=""><span class="contact-list-desc">gmail</span></a></li>
-              <li><a href="https://x.com/Endorfinn_" target="_blank"><img src="./files/twitter.png" alt=""><span class="contact-list-desc">twitter</span></a></li>
+              <li><a href="mailto:jibran1baehaqi@gmail.com"><img src="./files/mail.png" alt=""><span class="contact-list-desc">email</span></a></li>
+              <li><a href="https://facebook.com/jibran.baehaqi" target="_blank"><img src="./files/facebook.png" alt=""><span class="contact-list-desc">facebook</span></a></li>
             </ul>
           </div>
         </div>
@@ -346,53 +195,7 @@ body .container {
 <script src="./files/photoswipe-ui-default.js.download"></script>
 <script src="./files/photoswipe_setup.js.download"></script>
 <script src="./files/script.js.download"></script>
-
 <script>
-  // for tab switching (not fully implemented)
-  const tabs = document.querySelectorAll('.nav-tab');
-  const newsItems = document.querySelectorAll('.news-item');
-
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-        tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-
-       const tabType = tab.getAttribute('data-tab');
-        newsItems.forEach(item => {
-            // show "latest" news if tab latest is selected
-            if (tabType === 'latest') {
-                if (item.getAttribute('data-tab') === 'latest') {
-                  item.style.display = '';
-                } else {
-                  item.style.display = "none";
-                }
-                // otherwise show only items with matching data-type
-             }else if (item.getAttribute('data-tab') === tabType ) {
-              item.style.display = '';
-            } else {
-              item.style.display = "none";
-           }
-        });
-    });
-  });
-
-  // Smooth Scrolling
-  document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-
-          const targetId = this.getAttribute('href');
-          const targetElement = document.querySelector(targetId);
-
-          if (targetElement) {
-               window.scrollTo({
-                  top: targetElement.offsetTop,
-                  behavior: 'smooth' // For smooth animation
-              });
-          }
-      });
-  });
 </script>
-
 </body>
 </html>
